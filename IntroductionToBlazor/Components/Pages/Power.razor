@@ -1,0 +1,17 @@
+﻿@page "/power"
+@rendermode InteractiveServer
+
+<h3>Power</h3>
+
+<input type="number" min="0" max="20" @bind="s" @bind:event="oninput" />
+<input type="number" min="0" max="20" @bind="n" @bind:event="oninput" /><label>@Result</label>
+
+
+
+@code {
+    private double s = 0;
+    private double n = 0;
+
+    
+    private double Result => Math.Pow(s, n);
+}
