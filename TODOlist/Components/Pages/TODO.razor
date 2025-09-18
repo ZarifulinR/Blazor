@@ -3,32 +3,49 @@
 <PageTitle>TODO</PageTitle>
 
 <h3>TODO</h3>
-<div>Запланированно:(@tasks.Count(task=>!task.DONE))</div>
-<div>Выпоненно:(@tasks.Count(task=>task.DONE))</div>
-<input type="text" placeholder="Новая задача" @bind="task" />
-<button @onclick="AddTask">Добавить</button>
-<ul>
-    @foreach(TODOItem i in tasks)
-    {
-        
-        <li>
-            <input type="checkbox" @bind="i.DONE"  />
-            @i.Title
-        </li>
-    }
-</ul>
+<div>Запланированно:(@tasks.Count(task => !task.DONE))</div>
+<div>Выпоненно:(@tasks.Count(task => task.DONE))</div>
+<input class="textbox" @bind="task" />
+<button class="button-add" @onclick="AddTask">Добавить</button>
+@* <span class="complete-task">Strikeout</span> *@
+
+<div style="display:flex; gap:20px; margin-top:20px;">
+
+    <div class="TODO-Table">
+        <h4>TODO</h4>
+
+        <ul style ="margin-bottom: 50px; list-style: none; padding-left: 0; text-align: left;">
+            @foreach (TODOItem i in tasks)
+            {
+
+                <li style="margin-bottom: 5px;">
+                    <input type="checkbox" @bind="i.DONE" />
+                    <span class=@(i.DONE ? "complete-task" : "")>@i.Title</span>
+                </li>
+            }
+        </ul>
+        @* <button class="add-item" @onclick="AddTask"> Добавить задачу</button> *@
+    </div>
+
+
+    <div class="DONE-Table">
+        <h4>DONE</h4>
+        <p></p>
+    </div>
+</div>
 
 
 
-@code {
+
+@* @code {
     private List<TODOItem> tasks = [];
-    private string task ;
+    private string task;
     private void AddTask()
     {
-        if(!string.IsNullOrWhiteSpace(task))
+        if (!string.IsNullOrWhiteSpace(task))
         {
             tasks.Add(new TODOItem { Title = task });
             task = string.Empty;
         }
     }
-}
+} *@

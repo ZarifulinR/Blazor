@@ -1,0 +1,81 @@
+﻿ul {
+    list-style: none;
+}
+
+.complete-task {
+    text-decoration: line-through;
+    color: gray;
+}
+
+.TODO-Table {
+    background: radial-gradient(circle, rgb(137, 216, 221) 0%, rgba(0,0,255,0.05) 100%, transparent 100%);
+    text-align: center;
+    border-block-color: aqua;
+    min-width: 400px;
+    min-height: 500px;
+    position:relative;
+}
+
+.DONE-Table {
+    background: radial-gradient(circle, rgb(182, 255, 0) 0%, rgba(0,0,255,0.05) 100%, transparent 100%);
+    text-align: center;
+    border-block-color: aqua;
+    min-width: 400px;
+    min-height: 500px;
+}
+
+.button-add {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #4a90e2, #357abd);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+    .button-add:hover {
+        background: linear-gradient(135deg, #5aa0ff, #4686d6);
+        box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+        transform: translateY(-2px);
+    }
+.textbox {
+    width: 100%;
+    max-width: 300px;
+    padding: 10px 15px;
+    font-size: 15px;
+    border: 2px solid #ccc;
+    border-radius: 20px;
+    background: #f9f9f9;
+    color: #333;
+    box-shadow: inset 2px 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+    .textbox:focus {
+        outline: none;
+        border-color: #4a90e2;
+        background: #fff;
+        box-shadow: 0 0 8px rgba(74,144,226,0.6);
+    }
+    .h4{
+        font-weight:bold;
+        font-family:Courier New, Courier, monospace'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-display:unset;
+    }
+.add-item {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    flex-basis: auto;
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(135deg, #4a90e2, #357abd);
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+}
