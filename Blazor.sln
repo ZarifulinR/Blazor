@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TODOlist", "TODOlist\TODOli
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Academy", "Academy\Academy.csproj", "{88FF6FCC-3569-4995-9B2E-CB722A680AB9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test_PV_319", "Test_PV_319\Test_PV_319.csproj", "{C708F778-6BCE-46B4-844A-EAAFEBA9C650}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{88FF6FCC-3569-4995-9B2E-CB722A680AB9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{88FF6FCC-3569-4995-9B2E-CB722A680AB9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{88FF6FCC-3569-4995-9B2E-CB722A680AB9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C708F778-6BCE-46B4-844A-EAAFEBA9C650}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C708F778-6BCE-46B4-844A-EAAFEBA9C650}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C708F778-6BCE-46B4-844A-EAAFEBA9C650}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C708F778-6BCE-46B4-844A-EAAFEBA9C650}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
