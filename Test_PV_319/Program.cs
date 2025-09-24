@@ -1,6 +1,11 @@
+using Microsoft.EntityFrameworkCore;
 using Test_PV_319.Components;
+using Test_PV_319.Models;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddDbContext<Pd319Context>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
