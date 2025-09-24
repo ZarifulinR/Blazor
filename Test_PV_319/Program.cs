@@ -1,11 +1,15 @@
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 using Test_PV_319.Components;
 using Test_PV_319.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddDbContext<Pd319Context>(options =>
+builder.Services.AddDbContextFactory <Pd319Context>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddQuickGridEntityFrameworkAdapter();
+
+builder.Services.AddDatabaseDeveloperPageExceptionFilter();
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
@@ -19,6 +23,7 @@ if (!app.Environment.IsDevelopment())
     app.UseExceptionHandler("/Error", createScopeForErrors: true);
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
+    app.UseMigrationsEndPoint();
 }
 
 app.UseHttpsRedirection();
